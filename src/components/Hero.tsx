@@ -43,48 +43,48 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-black/70"></div>
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-4 pb-20 pt-16 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-4 pb-20 pt-24 sm:pt-32 sm:pb-24 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h1 className="text-4xl font-semibold leading-tight text-white sm:text-6xl lg:text-7xl">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-tight text-white px-2">
             The first whole-home water filtration
-            <span className="block text-white/90">for one billion Africans</span>
+            <span className="block text-white/90 mt-2">for one billion Africans</span>
           </h1>
 
-          <div className="mt-4 flex items-center justify-center gap-3 text-white/70">
-            <Droplets className="h-5 w-5" />
-            <span className="text-sm uppercase tracking-[0.3em]">Pure Water, Every Tap</span>
-            <Waves className="h-5 w-5" />
+          <div className="mt-4 sm:mt-6 flex items-center justify-center gap-2 sm:gap-3 text-white/70 flex-wrap px-4">
+            <Droplets className="h-4 w-4 sm:h-5 sm:w-5" />
+            <span className="text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.3em]">Pure Water, Every Tap</span>
+            <Waves className="h-4 w-4 sm:h-5 sm:w-5" />
           </div>
 
-          <p className="mx-auto mt-6 max-w-3xl text-lg text-white/80 sm:text-xl">
+          <p className="mx-auto mt-6 sm:mt-8 max-w-3xl text-base sm:text-lg lg:text-xl text-white/80 px-4">
             Gawawater installs a single filtration system at your main line, so every tap in your
             home is safer for drinking, cooking, showering, and washing — without big upfront costs
             or electricity.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 px-4">
             <button
               onClick={() => scrollToSection('products')}
-              className="rounded-full border border-white/30 bg-white/15 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-white/25"
+              className="w-full sm:w-auto rounded-full border border-white/30 bg-white/15 px-6 py-3 text-xs sm:text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-white/25"
             >
               Explore Products
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="rounded-full border border-white/40 bg-black/30 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-black/50"
+              className="w-full sm:w-auto rounded-full border border-white/40 bg-black/30 px-6 py-3 text-xs sm:text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-black/50"
             >
               Get in Touch
             </button>
           </div>
 
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm text-white/70">
+          <div className="mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm text-white/70 px-4">
             <span className="flex items-center gap-2">
-              <Droplets className="h-4 w-4 text-cyan-300" />
+              <Droplets className="h-3 w-3 sm:h-4 sm:w-4 text-cyan-300" />
               No electricity required
             </span>
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
             <span>One filter for the whole home</span>
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
             <span>Save up to 90% on water costs</span>
           </div>
         </div>

@@ -47,14 +47,14 @@ export default function ProblemSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/70"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-semibold text-white mb-4">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white mb-3 sm:mb-4">
             The problem
           </h2>
-          <p className="text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl sm:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed px-4">
             Water at home is unsafe, expensive and inconvenient.
           </p>
-          <p className="text-lg text-white/70 mt-6 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-white/70 mt-4 sm:mt-6 max-w-4xl mx-auto leading-relaxed px-4">
             One billion Africans lack clean drinking water in Sub-Saharan Africa and nearly one million
             people die each year from diarrhoea linked to unsafe drinking water, poor sanitation and hand
             hygiene. Because quality whole-home filtration is too expensive upfront, most households are
@@ -62,29 +62,29 @@ export default function ProblemSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
           {problems.map((problem) => (
             <div
               key={problem.number}
-              className="group relative rounded-3xl border border-white/15 bg-white/10 p-8 shadow-2xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-white/15"
+              className="group relative rounded-2xl sm:rounded-3xl border border-white/15 bg-white/10 p-6 sm:p-8 shadow-2xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-white/15"
             >
-              <div className="flex items-start gap-6">
+              <div className="flex items-start gap-4 sm:gap-6">
                 <div className="flex-shrink-0">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-white/20 bg-white/10 text-white/90 transition-transform duration-300 group-hover:scale-110">
-                    <problem.icon className="w-8 h-8" />
+                  <div className="flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-xl sm:rounded-2xl border border-white/20 bg-white/10 text-white/90 transition-transform duration-300 group-hover:scale-110">
+                    <problem.icon className="w-6 h-6 sm:w-8 sm:h-8" />
                   </div>
                 </div>
 
                 <div className="flex-grow">
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-3xl font-semibold text-cyan-300">
+                  <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+                    <span className="text-2xl sm:text-3xl font-semibold text-cyan-300">
                       {problem.number}
                     </span>
-                    <h3 className="text-xl font-semibold text-white">
+                    <h3 className="text-lg sm:text-xl font-semibold text-white">
                       {problem.title}
                     </h3>
                   </div>
-                  <p className="text-white/70 leading-relaxed">
+                  <p className="text-sm sm:text-base text-white/70 leading-relaxed">
                     {problem.description}
                   </p>
                 </div>
