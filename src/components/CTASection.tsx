@@ -15,7 +15,11 @@ export default function CTASection() {
   };
 
   return (
+<<<<<<< HEAD
     <section className="py-24 bg-gradient-to-br from-cyan-600 via-blue-600 to-teal-600 relative overflow-hidden">
+=======
+    <section id="contact" className="py-24 bg-gradient-to-br from-cyan-600 via-blue-600 to-teal-600 relative overflow-hidden">
+>>>>>>> 46768df (Initial Gawawater landing page design)
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl opacity-10 animate-blob"></div>
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-cyan-300 rounded-full mix-blend-overlay filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
