@@ -1,4 +1,6 @@
 import { Zap, Home, Droplets } from 'lucide-react';
+import powerImage from '../../assets/12.jpeg';
+import filterImage from '../../assets/filter.jpeg';
 
 const features = [
   {
@@ -57,7 +59,7 @@ export default function SolutionSection() {
           {/* Row 1: Image (left), Text Card (right) */}
           <div className="relative overflow-hidden rounded-3xl shadow-xl aspect-[4/3]">
             <img
-              src={features[0].image}
+              src={powerImage}
               alt="Water filtration system"
               className="h-full w-full object-cover"
               loading="lazy"
@@ -97,7 +99,7 @@ export default function SolutionSection() {
           {/* Row 3: Image (left), Text Card (right) */}
           <div className="relative overflow-hidden rounded-3xl shadow-xl aspect-[4/3]">
             <img
-              src={features[2].image}
+              src={filterImage}
               alt="Serviced filtration"
               className="h-full w-full object-cover"
               loading="lazy"
