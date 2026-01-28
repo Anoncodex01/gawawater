@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gawawater | Clean Water for Every Tap</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        * { font-family: 'Inter', sans-serif; }
+        
+        /* Custom styles */
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #22d3ee 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .card-glow {
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn-glow {
+            box-shadow: 0 10px 30px rgba(37, 209, 230, 0.25);
+        }
+        
+        .btn-glow:hover {
+            box-shadow: 0 15px 40px rgba(37, 209, 230, 0.35);
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.5s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .feature-icon {
+            background: linear-gradient(135deg, rgba(37, 209, 230, 0.1), rgba(59, 130, 246, 0.1));
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-4px);
+        }
+        
+        .tagline {
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 500;
+            font-size: 0.875rem;
+            letter-spacing: 0.02em;
+            border-left: 2px solid rgba(59, 130, 246, 0.5);
+            padding-left: 12px;
+            margin-left: 12px;
+        }
+        
+        .problem-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: rgba(255, 255, 255, 0.1);
+            line-height: 1;
+        }
+        
+        .problem-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        /* Human right section styles */
+        .human-right-section {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(37, 209, 230, 0.05));
+            border: 1px solid rgba(37, 209, 230, 0.15);
+        }
+        
+        .checkmark-circle {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #10b981, #22d3ee);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-3px);
+        }
+        
+        @media (max-width: 768px) {
+            .tagline {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="gradient-bg text-gray-100 min-h-screen">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 border-b border-gray-800/50 bg-gray-900/80 backdrop-blur-lg py-4">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
+                        <span class="text-white font-bold">G</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="text-xl font-black tracking-tight">GAWAWATER</span>
+                        <div class="tagline hidden md:block">
+                            Make every water drop pure!
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Only WhatsApp Chat button remains -->
+                <a href="https://wa.me/255700000000" target="_blank" class="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 px-6 py-2.5 rounded-full font-semibold text-sm transition-all shadow-lg btn-glow flex items-center gap-2">
+                    <i class="fab fa-whatsapp text-white"></i>
+                    Chat on WhatsApp
+                </a>
+            </div>
+            
+            <!-- Mobile tagline -->
+            <div class="md:hidden text-center mt-4">
+                <div class="tagline inline-block border-none px-0 mx-0">
+                    Make every water drop pure!
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center max-w-3xl mx-auto animate-slide-up">
+                <div class="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/20 px-4 py-2 rounded-full mb-6">
+                    <span class="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                    <span class="text-sm font-medium text-cyan-300">Starting in Tanzania</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6">
+                    Clean water
+                    <span class="gradient-text block">for every tap</span>
+                    in your home
+                </h1>
+                
+                <p class="text-xl text-gray-400 mb-10">
+                    One whole-home filter. Drink, cook, bathe, and wash with confidence.<br>
+                    <span class="font-semibold text-white">No electricity or batteries needed. Maintenance included.</span>
+                </p>
+                
+                <!-- Updated: Only Signup Form in Hero Section -->
+                <div class="flex justify-center mb-16 max-w-md mx-auto">
+                    <!-- Signup Form -->
+                    <div class="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-800 w-full">
+                        <h3 class="text-2xl font-bold mb-6 text-white text-center">Start Your Journey to Clean Water</h3>
+                        <form id="heroSignupForm" class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium mb-2 text-gray-300">Full name</label>
+                                <input type="text" id="heroFullName" placeholder="Enter your full name" 
+                                       class="w-full bg-gray-800/50 border border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:border-cyan-500 transition text-white placeholder-gray-500" 
+                                       required>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2 text-gray-300">Phone number</label>
+                                <input type="tel" id="heroPhoneNumber" placeholder="e.g., 07xx xxx xxx" 
+                                       class="w-full bg-gray-800/50 border border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:border-cyan-500 transition text-white placeholder-gray-500" 
+                                       required>
+                            </div>
+                            
+                            <button type="submit" 
+                                    class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-[1.02] shadow-xl btn-glow">
+                                Sign Up for Installation
+                            </button>
+                            
+                            <p class="text-center text-gray-500 text-sm mt-4">
+                                No upfront payment • Free assessment • WhatsApp support
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Value Proposition Cards -->
+            <div class="grid md:grid-cols-3 gap-6 mb-16">
+                <div class="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-800 hover-lift">
+                    <div class="feature-icon w-12 h-12 rounded-xl flex items-center justify-center mb-4">
+                        <span class="text-2xl">💧</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">No Electricity or Batteries</h3>
+                    <p class="text-gray-400">Uses your existing water pressure. Works during power cuts.</p>
+                </div>
+                
+                <div class="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-800 hover-lift">
+                    <div class="feature-icon w-12 h-12 rounded-xl flex items-center justify-center mb-4">
+                        <span class="text-2xl">🏠</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Whole Home Protection</h3>
+                    <p class="text-gray-400">Every tap protected - kitchen, bathroom, laundry.</p>
+                </div>
+                
+                <div class="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-800 hover-lift">
+                    <div class="feature-icon w-12 h-12 rounded-xl flex items-center justify-center mb-4">
+                        <span class="text-2xl">📱</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Simple Monthly Plan</h3>
+                    <p class="text-gray-400">Pay via mobile money. All service included.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Updated Problem Section with Image Data -->
+    <section id="problem" class="py-16 bg-gray-900/30">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-12">
+                <div class="inline-block bg-red-500/10 border border-red-500/20 px-4 py-1 rounded-full mb-4">
+                    <span class="text-red-300 text-sm font-medium">The Problem</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Why families across Africa struggle<br>
+                    with unsafe, expensive water
+                </h2>
+                <p class="text-gray-400 text-lg max-w-3xl mx-auto">
+                    Nearly 1 million people die each year in Sub-Saharan Africa from diarrhoea linked to unsafe water.<br>
+                    Current "solutions" create more problems than they solve.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Problem 1: Health Risks -->
+                <div class="bg-gray-900/50 rounded-2xl p-8 border border-red-900/30 hover-lift">
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="problem-number">01</div>
+                        <div class="problem-icon bg-red-500/10 text-red-400">
+                            🦠
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Water-borne & skin diseases</h3>
+                    <p class="text-gray-300 mb-4">
+                        Families drink, cook, bathe and wash with unclean water, leading to repeated outbreaks of waterborne illnesses and painful skin conditions.
+                    </p>
+                    <div class="bg-red-500/5 border border-red-500/10 rounded-xl p-4">
+                        <p class="text-sm text-red-300 font-medium">→ Children and elderly most vulnerable</p>
+                    </div>
+                </div>
+                
+                <!-- Problem 2: Boiling Issues -->
+                <div class="bg-gray-900/50 rounded-2xl p-8 border border-orange-900/30 hover-lift">
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="problem-number">02</div>
+                        <div class="problem-icon bg-orange-500/10 text-orange-400">
+                            🔥
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Boiling creates health risks</h3>
+                    <p class="text-gray-300 mb-4">
+                        Boiling water with charcoal fills homes with smoke, causing respiratory and eye diseases. Hot water stored in plastic increases long-term cancer risk.
+                    </p>
+                    <div class="bg-orange-500/5 border border-orange-500/10 rounded-xl p-4">
+                        <p class="text-sm text-orange-300 font-medium">→ Indoor air pollution affects entire family</p>
+                    </div>
+                </div>
+                
+                <!-- Problem 3: Environmental Impact -->
+                <div class="bg-gray-900/50 rounded-2xl p-8 border border-blue-900/30 hover-lift">
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="problem-number">03</div>
+                        <div class="problem-icon bg-blue-500/10 text-blue-400">
+                            🌍
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Plastic & carbon pollution</h3>
+                    <p class="text-gray-300 mb-4">
+                        Reliance on bottled water creates mountains of plastic waste and high carbon emissions from manufacturing, transport and disposal.
+                    </p>
+                    <div class="bg-blue-500/5 border border-blue-500/10 rounded-xl p-4">
+                        <p class="text-sm text-blue-300 font-medium">→ 30-50 plastic bottles per family monthly</p>
+                    </div>
+                </div>
+                
+                <!-- Problem 4: Partial Solutions -->
+                <div class="bg-gray-900/50 rounded-2xl p-8 border border-purple-900/30 hover-lift">
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="problem-number">04</div>
+                        <div class="problem-icon bg-purple-500/10 text-purple-400">
+                            💧
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Incomplete protection</h3>
+                    <p class="text-gray-300 mb-4">
+                        Most filters only treat a single jug or tap. They're easily forgotten, rarely replaced on time, and leave families exposed to unsafe water in showers, sinks and laundry.
+                    </p>
+                    <div class="bg-purple-500/5 border border-purple-500/10 rounded-xl p-4">
+                        <p class="text-sm text-purple-300 font-medium">→ 70% of water use happens outside kitchen</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Summary Stat -->
+            <div class="mt-12 max-w-3xl mx-auto text-center">
+                <div class="bg-gradient-to-r from-red-900/20 to-orange-900/20 border border-red-900/30 rounded-2xl p-8">
+                    <div class="text-4xl md:text-5xl font-bold mb-4">
+                        1 Million<span class="text-red-400">+</span>
+                    </div>
+                    <p class="text-xl text-gray-300">
+                        Annual deaths in Sub-Saharan Africa from unsafe water-related diseases
+                    </p>
+                    <p class="text-gray-400 text-sm mt-4">
+                        WHO estimates • Most victims are children under 5
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how" class="py-16">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-16">
+                <div class="inline-block bg-cyan-500/10 border border-cyan-500/20 px-4 py-1 rounded-full mb-4">
+                    <span class="text-cyan-300 text-sm font-medium">The Solution</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    How Gawawater works
+                </h2>
+                <p class="text-gray-400 text-lg">
+                    From bottled water anxiety to whole-home peace of mind in three simple steps.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 mx-auto">1</div>
+                    <h3 class="text-xl font-bold mb-3">Home &amp; water assessment</h3>
+                    <p class="text-gray-400">
+                        We visit your home, apartment, or site to inspect the main water line, pressure and storage.
+                        You receive a clear recommendation and a transparent monthly quote.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 mx-auto">2</div>
+                    <h3 class="text-xl font-bold mb-3">Professional installation</h3>
+                    <p class="text-gray-400">
+                        A certified Gawawater technician installs the whole-home filter at your main line.
+                        Most installs are completed in a few hours with minimal disruption and full leak checks.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 mx-auto">3</div>
+                    <h3 class="text-xl font-bold mb-3">Filters‑as‑a‑Service (FaaS)</h3>
+                    <p class="text-gray-400">
+                        You pay a simple monthly fee via mobile money. We schedule and perform filter replacements,
+                        monitor service dates, and keep your whole system working — so you never have to guess if your water is safe.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLEAN WATER IS A HUMAN RIGHT Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="human-right-section rounded-3xl overflow-hidden card-glow animate-slide-up">
+                <div class="p-12">
+                    <!-- Main Statement -->
+                    <div class="text-center mb-12">
+                        <div class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 px-4 py-2 rounded-full mb-6">
+                            <span class="w-2 h-2 bg-emerald-400 rounded-full"></span>
+                            <span class="text-sm font-medium text-emerald-300">Gawawater</span>
+                        </div>
+                        
+                        <h2 class="text-4xl md:text-5xl font-black mb-8">
+                            <span class="gradient-text">Clean water is a human right.</span>
+                        </h2>
+                        
+                        <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                            Gawawater turns unsafe, expensive household water into safe, whole-home water for every tap, shower and sink — with no big upfront cost. One filter at the main line, maintained for you on a simple monthly plan.
+                        </p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <!-- Left: Benefits List -->
+                        <div>
+                            <h3 class="text-2xl font-bold mb-8 text-white">What you get with Gawawater:</h3>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start gap-4">
+                                    <div class="checkmark-circle flex-shrink-0">
+                                        ✓
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-bold mb-1 text-white">Whole-home filtration</h4>
+                                        <p class="text-gray-300">Protection for drinking, cooking, bathing and cleaning at every tap.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start gap-4">
+                                    <div class="checkmark-circle flex-shrink-0">
+                                        ✓
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-bold mb-1 text-white">Filters-as-a-Service (FaaS)</h4>
+                                        <p class="text-gray-300">Installation, maintenance and replacements all included in your monthly plan.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start gap-4">
+                                    <div class="checkmark-circle flex-shrink-0">
+                                        ✓
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-bold mb-1 text-white">Health & environmental benefits</h4>
+                                        <p class="text-gray-300">Less boiling, fewer plastic bottles and lower health and climate risk for your family.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Right: Signup Form -->
+                        <div class="bg-gray-900/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-800">
+                            <h3 class="text-2xl font-bold mb-2 text-white">Ready to install Gawawater?</h3>
+                            <p class="text-gray-400 mb-6">Share your details and we'll contact you to schedule a home assessment and installation.</p>
+                            
+                            <form id="humanRightForm" class="space-y-4">
+                                <div>
+                                    <label class="block text-sm font-medium mb-2 text-gray-300">Full name</label>
+                                    <input type="text" id="humanRightName" placeholder="Enter your full name" 
+                                           class="w-full bg-gray-800/50 border border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:border-cyan-500 transition text-white placeholder-gray-500" required>
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-sm font-medium mb-2 text-gray-300">Phone number</label>
+                                    <input type="tel" id="humanRightPhone" placeholder="e.g., 07xx xxx xxx" 
+                                           class="w-full bg-gray-800/50 border border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:border-cyan-500 transition text-white placeholder-gray-500" required>
+                                </div>
+                                
+                                <button type="submit" 
+                                        class="w-full bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-[1.02] shadow-lg">
+                                    Sign up for installation
+                                </button>
+                                
+                                <div class="bg-gray-800/30 rounded-xl p-4 mt-6 border border-gray-700/50">
+                                    <p class="text-sm text-gray-400 text-center">
+                                        We're starting in Tanzania and prioritising homes and apartments in Dar es Salaam and nearby cities.
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Updated Footer with Social Icons -->
+    <footer class="py-12 border-t border-gray-800/50 bg-gray-900/30">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <!-- Brand Info -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
+                            <span class="text-white font-bold">G</span>
+                        </div>
+                        <div>
+                            <div class="font-black text-xl">GAWAWATER</div>
+                            <div class="text-cyan-300 text-sm font-medium">Make every water drop pure!</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Whole-home water filtration for African families. Starting in Tanzania.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-white">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#how" class="text-gray-400 hover:text-white transition-colors">How It Works</a></li>
+                        <li><a href="#problem" class="text-gray-400 hover:text-white transition-colors">The Problem</a></li>
+                        <li><button onclick="openLeadForm()" class="text-gray-400 hover:text-white transition-colors">Get Started</button></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact & Social -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-white">Connect with us</h3>
+                    <p class="text-gray-400 text-sm mb-4">
+                        Have questions? We're here to help.
+                    </p>
+                    
+                    <div class="flex space-x-4">
+                        <a href="https://wa.me/255700000000" target="_blank" 
+                           class="social-icon w-10 h-10 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-300 hover:bg-emerald-500/30 hover:border-emerald-500/40">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        
+                        <a href="https://instagram.com/gawawater" target="_blank" 
+                           class="social-icon w-10 h-10 rounded-full bg-pink-500/20 border border-pink-500/30 flex items-center justify-center text-pink-300 hover:bg-pink-500/30 hover:border-pink-500/40">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        
+                        <button onclick="openLeadForm()" 
+                                class="social-icon w-10 h-10 rounded-full bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center text-cyan-300 hover:bg-cyan-500/30 hover:border-cyan-500/40">
+                            <i class="fas fa-envelope"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Divider -->
+            <div class="h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent mb-6"></div>
+            
+            <!-- Bottom Row -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="text-center md:text-left">
+                    <div class="text-gray-500 text-sm mb-1">Installed by certified technicians • Registered in Tanzania</div>
+                    <div class="text-gray-600 text-sm">© 2024 Gawawater. All rights reserved.</div>
+                </div>
+                
+                <div class="flex items-center gap-4">
+                    <a href="https://wa.me/255700000000" target="_blank" class="text-gray-400 hover:text-white text-sm flex items-center gap-2">
+                        <i class="fab fa-whatsapp text-emerald-400"></i>
+                        +255 700 000 000
+                    </a>
+                    <a href="mailto:hello@gawawater.com" class="text-gray-400 hover:text-white text-sm flex items-center gap-2">
+                        <i class="fas fa-envelope text-cyan-400"></i>
+                        hello@gawawater.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-emerald-500 to-green-600 text-white px-6 py-3 rounded-full font-medium shadow-2xl z-50 hidden animate-fade-in">
+        ✅ Thanks! We'll contact you within 24 hours.
+    </div>
+
+    <!-- Lead Modal -->
+    <div id="leadModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-gray-900 rounded-3xl border border-gray-800 max-w-md w-full p-8 animate-slide-up">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold">Start Your Free Assessment</h3>
+                <button onclick="closeLeadForm()" class="text-gray-500 hover:text-white text-2xl">×</button>
+            </div>
+            
+            <form id="modalForm" onsubmit="submitForm(event)" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium mb-2">Full name</label>
+                    <input type="text" id="modalFullName" required 
+                           class="w-full bg-gray-800/50 border border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:border-cyan-500 transition text-white">
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium mb-2">Phone number (WhatsApp ok)</label>
+                    <input type="tel" id="modalPhoneNumber" required 
+                           class="w-full bg-gray-800/50 border border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:border-cyan-500 transition text-white"
+                           placeholder="e.g., 07xx xxx xxx">
+                </div>
+                
+                <button type="submit" 
+                        class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-[1.02] shadow-xl btn-glow">
+                    Submit → We'll call within 24 hours
+                </button>
+                
+                <p class="text-center text-gray-500 text-sm mt-4">
+                    No upfront payment • Free assessment • WhatsApp support
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Gawawater loaded');
+            
+            // Set up hero form submission
+            document.getElementById('heroSignupForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                const fullName = document.getElementById('heroFullName').value;
+                const phone = document.getElementById('heroPhoneNumber').value;
+                
+                // Mock CRM storage
+                const lead = {
+                    name: fullName,
+                    phone: phone,
+                    timestamp: new Date().toISOString(),
+                    source: 'hero_section'
+                };
+                
+                // Store in localStorage
+                const existingLeads = JSON.parse(localStorage.getItem('gawawater_leads') || '[]');
+                existingLeads.push(lead);
+                localStorage.setItem('gawawater_leads', JSON.stringify(existingLeads));
+                
+                // Clear form
+                document.getElementById('heroFullName').value = '';
+                document.getElementById('heroPhoneNumber').value = '';
+                
+                // Show success message
+                const firstName = fullName.split(' ')[0] || '';
+                showToast(firstName);
+                
+                console.log('Hero form lead saved:', lead);
+            });
+        });
+        
+        // Form handling
+        function openLeadForm() {
+            document.getElementById('leadModal').classList.remove('hidden');
+            document.getElementById('leadModal').classList.add('flex');
+        }
+        
+        function closeLeadForm() {
+            document.getElementById('leadModal').classList.add('hidden');
+            document.getElementById('leadModal').classList.remove('flex');
+        }
+        
+        function submitForm(event) {
+            event.preventDefault();
+            
+            let fullName, phone, source = 'landing_page';
+            
+            if (event.target.id === 'humanRightForm') {
+                fullName = document.getElementById('humanRightName').value;
+                phone = document.getElementById('humanRightPhone').value;
+                source = 'human_right_section';
+            } else {
+                fullName = document.getElementById('modalFullName').value;
+                phone = document.getElementById('modalPhoneNumber').value;
+            }
+            
+            // Mock CRM storage
+            const lead = {
+                name: fullName,
+                phone: phone,
+                timestamp: new Date().toISOString(),
+                source: source
+            };
+            
+            // Store in localStorage
+            const existingLeads = JSON.parse(localStorage.getItem('gawawater_leads') || '[]');
+            existingLeads.push(lead);
+            localStorage.setItem('gawawater_leads', JSON.stringify(existingLeads));
+            
+            // Clear form
+            if (event.target.id === 'humanRightForm') {
+                document.getElementById('humanRightName').value = '';
+                document.getElementById('humanRightPhone').value = '';
+            } else {
+                closeLeadForm();
+                document.getElementById('modalFullName').value = '';
+                document.getElementById('modalPhoneNumber').value = '';
+            }
+            
+            // Show success message
+            const firstName = fullName.split(' ')[0] || '';
+            showToast(firstName);
+            
+            console.log('Lead saved:', lead);
+        }
+        
+        function showToast(firstName) {
+            const toast = document.getElementById('toast');
+            toast.textContent = `✅ Thanks${firstName ? ' ' + firstName : ''}! We'll contact you within 24 hours.`;
+            toast.classList.remove('hidden');
+            
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 4000);
+        }
+        
+        // Set up form submissions
+        document.getElementById('modalForm').addEventListener('submit', submitForm);
+        document.getElementById('humanRightForm').addEventListener('submit', submitForm);
+        
+        // Close modal on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLeadForm();
+        });
+        
+        // Close modal on outside click
+        document.getElementById('leadModal').addEventListener('click', (e) => {
+            if (e.target.id === 'leadModal') closeLeadForm();
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

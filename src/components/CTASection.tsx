@@ -1,6 +1,5 @@
 import { FormEvent, useState } from 'react';
 import { Droplets, CheckCircle } from 'lucide-react';
-import gridLines from '../../assets/grid-lines.svg';
 
 const benefits = [
   {
@@ -33,11 +32,14 @@ export default function CTASection() {
   return (
     <section id="contact" className="relative overflow-hidden bg-neutral-950 py-12 sm:py-16 lg:py-24 text-white">
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 opacity-100"
         style={{
-          backgroundImage: `url(${gridLines})`,
-          backgroundRepeat: 'repeat',
+          backgroundImage: `
+            linear-gradient(to right, rgba(255,255,255,0.08) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255,255,255,0.08) 1px, transparent 1px)
+          `,
           backgroundSize: '32px 32px',
+          backgroundRepeat: 'repeat',
         }}
       />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.03),_transparent_50%)]" />
