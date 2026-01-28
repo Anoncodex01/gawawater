@@ -1,5 +1,10 @@
 import { Droplets, Waves } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { HugeiconsIcon } from '@hugeicons/react';
+import type { IconSvgElement } from '@hugeicons/react';
+import WaterEnergyIcon from '@hugeicons/core-free-icons/dist/esm/WaterEnergyIcon';
+import Home01Icon from '@hugeicons/core-free-icons/dist/esm/Home01Icon';
+import SmartPhone01Icon from '@hugeicons/core-free-icons/dist/esm/SmartPhone01Icon';
+import { FormEvent, useEffect, useState } from 'react';
 import heroVideoOne from '../../assets/video/233867_small.mp4';
 import heroVideoTwo from '../../assets/video/199596-910653729_small.mp4';
 
@@ -43,49 +48,124 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-black/70"></div>
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-4 pb-20 pt-24 sm:pt-32 sm:pb-24 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-tight text-white px-2">
-            The first whole-home water filtration
-            <span className="block text-white/90 mt-2">for one billion Africans</span>
-          </h1>
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-6xl flex-col justify-center px-4 pb-20 pt-24 sm:pt-32 sm:pb-24 sm:px-6 lg:px-8">
+        {/* Top: two-column layout */}
+        <div className="grid gap-10 lg:grid-cols-2 items-center">
+          {/* Left: text */}
+          <div className="max-w-xl">
+            <div className="inline-flex items-center space-x-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-2 text-xs font-medium text-cyan-300 mb-6">
+              <span className="h-2 w-2 rounded-full bg-cyan-400" />
+              <span>Starting in Tanzania</span>
+            </div>
 
-          <div className="mt-4 sm:mt-6 flex items-center justify-center gap-2 sm:gap-3 text-white/70 flex-wrap px-4">
-            <Droplets className="h-4 w-4 sm:h-5 sm:w-5" />
-            <span className="text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.3em]">Pure Water, Every Tap</span>
-            <Waves className="h-4 w-4 sm:h-5 sm:w-5" />
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight text-white">
+              Clean water{' '}
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                for every tap
+              </span>
+              <span className="block mt-1">in your home</span>
+            </h1>
+
+            <p className="mt-6 text-base sm:text-lg text-gray-200">
+              One whole-home filter. Drink, cook, bathe, and wash with confidence.
+              <br />
+              <span className="font-semibold text-white">
+                No electricity or batteries needed. Maintenance included.
+              </span>
+            </p>
           </div>
 
-          <p className="mx-auto mt-6 sm:mt-8 max-w-3xl text-base sm:text-lg lg:text-xl text-white/80 px-4">
-            Gawawater installs a single filtration system at your main line, so every tap in your
-            home is safer for drinking, cooking, showering, and washing — without big upfront costs
-            or electricity.
-          </p>
+          {/* Right: CTA card */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="w-full max-w-md rounded-3xl bg-black/35 px-6 py-8 sm:px-8 sm:py-10 shadow-2xl shadow-black/60 border border-white/20 backdrop-blur-2xl text-left">
+              <h2 className="text-xl sm:text-2xl font-bold text-white text-center mb-6">
+                Start Your Journey to Clean Water
+              </h2>
+              <form
+                onSubmit={(e: FormEvent) => {
+                  e.preventDefault();
+                  scrollToSection('contact');
+                }}
+                className="space-y-4"
+              >
+                <div>
+                  <label className="mb-2 block text-sm font-medium text-gray-300">
+                    Full name
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Enter your full name"
+                    className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-gray-400 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/30"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="mb-2 block text-sm font-medium text-gray-300">
+                    Phone number
+                  </label>
+                  <input
+                    type="tel"
+                    placeholder="e.g., 07xx xxx xxx"
+                    className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-gray-400 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/30"
+                    required
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="mt-2 w-full rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-3 text-sm font-semibold text-white shadow-lg transition hover:from-cyan-600 hover:to-blue-700 hover:shadow-xl"
+                >
+                  Sign Up for Installation
+                </button>
+                <p className="mt-3 text-center text-xs text-gray-300">
+                  No upfront payment • Free assessment • WhatsApp support
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
 
-          <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 px-4">
-            <button
-              onClick={() => scrollToSection('products')}
-              className="w-full sm:w-auto rounded-full border border-white/30 bg-white/15 px-6 py-3 text-xs sm:text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-white/25"
-            >
-              Explore Products
-            </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="w-full sm:w-auto rounded-full border border-white/40 bg-black/30 px-6 py-3 text-xs sm:text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-black/50"
-            >
-              Get in Touch
-            </button>
+        {/* Bottom: three value cards */}
+        <div className="mt-12 grid gap-4 md:gap-6 md:grid-cols-3">
+          <div className="rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl shadow-lg px-5 py-5 flex gap-4 items-start">
+            <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-sky-500/15 text-2xl">
+              <HugeiconsIcon icon={WaterEnergyIcon as IconSvgElement} size={22} color="#38bdf8" />
+            </div>
+            <div>
+              <h3 className="text-sm sm:text-base font-semibold text-white mb-1.5">
+                No Electricity or Batteries
+              </h3>
+              <p className="text-xs sm:text-sm text-white/70">
+                Uses your existing water pressure. Works during power cuts.
+              </p>
+            </div>
           </div>
 
-          <div className="mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm text-white/70 px-4">
-            <span className="flex items-center gap-2">
-              <Droplets className="h-3 w-3 sm:h-4 sm:w-4 text-cyan-300" />
-              No electricity required
-            </span>
-            <span className="hidden sm:inline">•</span>
-            <span>One filter for the whole home</span>
-            <span className="hidden sm:inline">•</span>
-            <span>Save up to 90% on water costs</span>
+          <div className="rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl shadow-lg px-5 py-5 flex gap-4 items-start">
+            <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-500/15 text-2xl">
+              <HugeiconsIcon icon={Home01Icon as IconSvgElement} size={22} color="#6ee7b7" />
+            </div>
+            <div>
+              <h3 className="text-sm sm:text-base font-semibold text-white mb-1.5">
+                Whole Home Protection
+              </h3>
+              <p className="text-xs sm:text-sm text-white/70">
+                Every tap protected – kitchen, bathroom, laundry.
+              </p>
+            </div>
+          </div>
+
+          <div className="rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl shadow-lg px-5 py-5 flex gap-4 items-start">
+            <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-indigo-500/15 text-2xl">
+              <HugeiconsIcon icon={SmartPhone01Icon as IconSvgElement} size={22} color="#a5b4fc" />
+            </div>
+            <div>
+              <h3 className="text-sm sm:text-base font-semibold text-white mb-1.5">
+                Simple Monthly Plan
+              </h3>
+              <p className="text-xs sm:text-sm text-white/70">
+                Pay via mobile money. All service included.
+              </p>
+            </div>
           </div>
         </div>
       </div>

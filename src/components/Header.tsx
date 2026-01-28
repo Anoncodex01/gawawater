@@ -5,8 +5,8 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 pt-4 sm:pt-6 px-4 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
+    <header className="fixed top-0 left-0 right-0 z-50 pt-4 sm:pt-6 px-3 sm:px-4 lg:px-6">
+      <div className="mx-auto max-w-5xl">
         <div className="flex items-center justify-between rounded-full border border-white/15 bg-white/10 px-3 sm:px-4 py-2.5 sm:py-3 text-sm font-medium uppercase tracking-wide shadow-lg backdrop-blur-xl">
           <div className="flex items-center gap-2">
             <Droplets className="h-5 w-5 sm:h-6 sm:w-6 text-cyan-300" />
