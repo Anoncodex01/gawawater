@@ -1,5 +1,5 @@
 import { FormEvent, useState } from 'react';
-import { Droplets, CheckCircle } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 const benefits = [
   {
@@ -30,7 +30,7 @@ export default function CTASection() {
   };
 
   return (
-    <section id="contact" className="relative overflow-hidden bg-neutral-950 py-12 sm:py-16 lg:py-24 text-white">
+    <section id="contact" className="relative overflow-hidden bg-neutral-950 py-12 sm:py-16 lg:py-24 pb-40 sm:pb-44 lg:pb-48 text-white">
       <div
         className="absolute inset-0 opacity-100"
         style={{
@@ -121,16 +121,6 @@ export default function CTASection() {
           </div>
         </div>
       </div>
-
-      <footer className="relative mt-16 sm:mt-20 text-center text-white/80">
-        <div className="flex items-center justify-center gap-2 mb-3">
-          <Droplets className="w-8 h-8 text-cyan-400" />
-          <span className="text-xl sm:text-2xl font-bold text-white">Gawawater</span>
-        </div>
-        <p className="text-white/60 text-sm sm:text-base">
-          Clean water for one billion Africans
-        </p>
-      </footer>
     </section>
   );
 }

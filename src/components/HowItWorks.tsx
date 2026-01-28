@@ -71,12 +71,6 @@ export default function HowItWorks() {
             </div>
           ))}
         </div>
-
-        <div className="mx-auto max-w-4xl rounded-2xl sm:rounded-3xl border border-white/15 bg-white/10 px-6 sm:px-8 py-5 sm:py-6 text-center shadow-2xl backdrop-blur-xl">
-          <p className="text-base sm:text-lg text-white/80">
-            Built for African cities, starting with Tanzania. No big upfront cost. No dependence on electricity.
-          </p>
-        </div>
       </div>
     </section>
   );
