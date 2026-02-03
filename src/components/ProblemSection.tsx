@@ -107,26 +107,6 @@ export default function ProblemSection() {
             </div>
           ))}
         </div>
-
-        <div className="relative mt-14 sm:mt-20 lg:mt-24 text-center py-12 sm:py-16 overflow-hidden">
-          <div
-            className="absolute inset-0 -mx-4 sm:-mx-8"
-            style={{
-              background: 'radial-gradient(ellipse 80% 60% at 50% 50%, rgba(59,130,246,0.12) 0%, rgba(59,130,246,0.04) 40%, transparent 70%)',
-            }}
-          />
-          <div className="relative">
-            <p className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight">
-              <span className="text-[rgb(59,130,246)]">1 Million</span><span className="text-[rgb(59,130,246)]">+</span>
-            </p>
-            <p className="mt-4 sm:mt-5 text-base sm:text-lg text-white/80 leading-relaxed max-w-xl mx-auto">
-              Annual deaths in Sub-Saharan Africa from unsafe water-related diseases
-            </p>
-            <p className="mt-2 text-sm text-white/50">
-              WHO estimates • Most victims are children under 5
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );
