@@ -1,5 +1,6 @@
 import { Mail } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
+import gawawaterLogo from '../../assets/gawawater official logo-01.png';
 
 const WHATSAPP_URL = 'https://wa.me/255700000000';
 const INSTAGRAM_URL = 'https://instagram.com/gawawater';
@@ -35,15 +36,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
           {/* Brand */}
           <div className="space-y-3 sm:col-span-2 md:col-span-1">
-            <div className="flex items-center gap-3">
-              <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 text-xl font-bold text-white">
-                G
-              </div>
-              <span className="text-lg font-bold uppercase tracking-tight">Gawawater</span>
+            <div className="flex items-center">
+              <img
+                src={gawawaterLogo}
+                alt="Gawawater"
+                className="h-24 sm:h-28 w-auto object-contain"
+              />
             </div>
             <p className="text-sm text-white/80">Make every water drop pure!</p>
             <p className="text-sm text-white/60 leading-relaxed">
-              Whole-home water filtration for African families. Starting in Tanzania.
+              Whole-home water filtration for African families.
             </p>
           </div>
 

@@ -32,14 +32,20 @@ export default function CTASection() {
   return (
     <section id="contact" className="relative overflow-hidden bg-neutral-950 py-12 sm:py-16 lg:py-24 pb-40 sm:pb-44 lg:pb-48 text-white">
       <div
-        className="absolute inset-0 opacity-100"
+        className="absolute inset-0"
         style={{
           backgroundImage: `
-            linear-gradient(to right, rgba(255,255,255,0.08) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(255,255,255,0.08) 1px, transparent 1px)
+            linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px)
           `,
           backgroundSize: '32px 32px',
           backgroundRepeat: 'repeat',
+        }}
+      />
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 25%, transparent 50%)',
         }}
       />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.03),_transparent_50%)]" />
@@ -48,8 +54,9 @@ export default function CTASection() {
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           {/* Left: copy */}
           <div className="max-w-xl">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-cyan-300 mb-4 sm:mb-6">
-              Clean water is a human right.
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+              <span className="text-white">Clean water is a</span>
+              <span className="block text-[rgb(59,130,246)]">human right.</span>
             </h2>
             <p className="text-base sm:text-lg text-white/80 leading-relaxed mb-8 sm:mb-10">
               Gawawater turns unsafe, expensive household water into safe, whole-home water for every tap, shower and sink — with no big upfront cost. One filter at the main line, maintained for you on a simple monthly plan.
@@ -60,7 +67,7 @@ export default function CTASection() {
             <ul className="space-y-4">
               {benefits.map((item) => (
                 <li key={item.title} className="flex items-start gap-3">
-                  <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-6 h-6 text-[rgb(59,130,246)] flex-shrink-0 mt-0.5" />
                   <span className="text-white/90">
                     <span className="font-semibold text-white">{item.title}</span>{' '}
                     {item.text}
@@ -90,7 +97,7 @@ export default function CTASection() {
                     required
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white/5 text-white placeholder-white/40 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/30 outline-none transition"
+                    className="w-full px-4 py-3 rounded-xl border border-white/15 bg-white/10 text-white placeholder-white/40 outline-none transition focus:border-[rgb(59,130,246)] focus:ring-2 focus:ring-[rgb(59,130,246)]/30"
                   />
                 </div>
                 <div>
@@ -102,21 +109,17 @@ export default function CTASection() {
                     required
                     value={formData.phoneNumber}
                     onChange={(e) => setFormData({ ...formData, phoneNumber: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white/5 text-white placeholder-white/40 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/30 outline-none transition"
+                    className="w-full px-4 py-3 rounded-xl border border-white/15 bg-white/10 text-white placeholder-white/40 outline-none transition focus:border-[rgb(59,130,246)] focus:ring-2 focus:ring-[rgb(59,130,246)]/30"
                   />
                 </div>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 sm:py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-gradient-to-r from-[rgb(59,130,246)] to-indigo-600 text-white px-6 py-3 sm:py-4 rounded-xl font-semibold shadow-[0_18px_45px_rgba(59,130,246,0.35)] transition hover:from-blue-600 hover:to-indigo-700 hover:shadow-[0_18px_45px_rgba(59,130,246,0.45)] disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? 'Submitting...' : 'Sign up for installation'}
                 </button>
               </form>
-
-              <p className="mt-6 text-xs sm:text-sm text-white/60">
-                We're starting in Tanzania and prioritising homes and apartments in Dar es Salaam and nearby cities.
-              </p>
             </div>
           </div>
         </div>

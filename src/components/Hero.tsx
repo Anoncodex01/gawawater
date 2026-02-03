@@ -53,16 +53,9 @@ export default function Hero() {
         <div className="grid gap-10 lg:grid-cols-2 items-center">
           {/* Left: text */}
           <div className="max-w-xl">
-            <div className="inline-flex items-center space-x-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-2 text-xs font-medium text-cyan-300 mb-6">
-              <span className="h-2 w-2 rounded-full bg-cyan-400" />
-              <span>Starting in Tanzania</span>
-            </div>
-
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight text-white">
               Clean water{' '}
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                for every tap
-              </span>
+              <span className="text-[rgb(59,130,246)]">for every tap</span>
               <span className="block mt-1">in your home</span>
             </h1>
 
@@ -78,8 +71,9 @@ export default function Hero() {
           {/* Right: CTA card */}
           <div className="flex justify-center lg:justify-end">
             <div className="w-full max-w-md rounded-3xl bg-black/35 px-6 py-8 sm:px-8 sm:py-10 shadow-2xl shadow-black/60 border border-white/20 backdrop-blur-2xl text-left">
-              <h2 className="text-xl sm:text-2xl font-bold text-white text-center mb-6">
-                Start Your Journey to Clean Water
+              <h2 className="text-xl sm:text-2xl font-bold text-center mb-6 font-['DM_Sans']">
+                <span className="text-[rgb(59,130,246)]">Every family deserves safe water.</span>{' '}
+                <span className="text-white">Start your journey to clean water now.</span>
               </h2>
               <form
                 onSubmit={(e: FormEvent) => {
@@ -95,7 +89,7 @@ export default function Hero() {
                   <input
                     type="text"
                     placeholder="Enter your full name"
-                    className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-gray-400 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/30"
+                    className="w-full rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-sm text-white placeholder-gray-400 outline-none transition focus:border-[rgb(59,130,246)] focus:ring-2 focus:ring-[rgb(59,130,246)]/30"
                     required
                   />
                 </div>
@@ -106,19 +100,16 @@ export default function Hero() {
                   <input
                     type="tel"
                     placeholder="e.g., 07xx xxx xxx"
-                    className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-gray-400 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/30"
+                    className="w-full rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-sm text-white placeholder-gray-400 outline-none transition focus:border-[rgb(59,130,246)] focus:ring-2 focus:ring-[rgb(59,130,246)]/30"
                     required
                   />
                 </div>
                 <button
                   type="submit"
-                  className="mt-2 w-full rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-3 text-sm font-semibold text-white shadow-lg transition hover:from-cyan-600 hover:to-blue-700 hover:shadow-xl"
+                  className="mt-2 w-full rounded-xl bg-gradient-to-r from-[rgb(59,130,246)] to-indigo-600 px-4 py-3 text-sm font-semibold text-white shadow-[0_18px_45px_rgba(59,130,246,0.35)] transition hover:from-blue-600 hover:to-indigo-700 hover:shadow-[0_18px_45px_rgba(59,130,246,0.45)]"
                 >
                   Sign Up for Installation
                 </button>
-                <p className="mt-3 text-center text-xs text-gray-300">
-                  No upfront payment • Free assessment • WhatsApp support
-                </p>
               </form>
             </div>
           </div>

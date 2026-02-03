@@ -1,4 +1,5 @@
 import WhatsAppIcon from './WhatsAppIcon';
+import headerLogo from '../../assets/logotransperancy.png';
 
 const WHATSAPP_URL = 'https://wa.me/255700000000';
 
@@ -8,15 +9,15 @@ export default function Header() {
       <div className="mx-auto max-w-6xl">
         <div className="flex items-center justify-between rounded-full border border-white/15 bg-white/10 px-4 sm:px-6 py-2.5 sm:py-3 shadow-lg backdrop-blur-xl">
           <div className="flex items-center gap-3 sm:gap-4 min-w-0">
-            <div className="flex h-10 w-10 sm:h-11 sm:w-11 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 text-lg font-bold text-white">
-              G
-            </div>
-            <span className="text-base sm:text-lg font-bold uppercase tracking-tight text-white truncate">
-              Gawawater
-            </span>
+            <img
+              src={headerLogo}
+              alt="Gawawater"
+              className="h-9 sm:h-10 w-auto object-contain flex-shrink-0"
+            />
+            <span className="text-xs sm:text-sm font-medium text-white/90 -ml-0.5">gawawater</span>
             <div className="hidden sm:block h-6 w-px flex-shrink-0 bg-blue-400/60" />
             <p className="hidden sm:block text-sm text-white/70 truncate">
-              Make every water drop pure!
+              Make Every Water Drop Pure
             </p>
           </div>
           <a
