@@ -99,7 +99,7 @@ export default function ProblemSection() {
                     <div
                       className={`mt-4 rounded-xl border px-4 py-3 text-xs sm:text-sm font-medium ${problem.calloutColor}`}
                     >
-                      → {problem.calloutText}
+                      {problem.calloutText}
                     </div>
                   )}
                 </div>
